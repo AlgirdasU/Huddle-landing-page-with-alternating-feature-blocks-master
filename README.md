@@ -26,12 +26,13 @@ Users should be able to:
 ### Screenshot
 
 ![](images/desktop.jpg)
+
 ![](images/mobile.jpg)
 
 ### Links
 
 - Solution URL: (https://github.com/AlgirdasU/Huddle-landing-page-with-alternating-feature-blocks-master)
-- Live Site URL: (https://visionary-salmiakki-2402af.netlify.app) 
+- Live Site URL: (https://profound-manatee-e5cb1c.netlify.app) 
 ## My process
 
 ### Built with
