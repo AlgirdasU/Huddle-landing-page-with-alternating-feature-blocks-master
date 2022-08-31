@@ -1,6 +1,7 @@
 :root {
   // Primary color
   --pink: hsl(322, 100%, 66%);
+  --pink-hover: rgb(255, 155, 219);
   --pink-dark: hsl(322, 91%, 54%);
 
   // Neurtral
@@ -93,6 +94,7 @@ html {
     cursor: pointer;
 
     &:hover {
+      color: var(--grayish-blue);
       box-shadow: 0 0.65rem 1.5rem 0.2rem var(--cta-shadow);
       -webkit-transform: translateY(-1.5px);
       transform: translateY(-1.5px);
@@ -183,7 +185,6 @@ html {
     font-size: var(--cta-font-sz-hero);
     color: var(--cta-lightgrey-font);
     background-color: var(--pink);
-    border: 0.1rem solid var(--pink);
     border-radius: 5rem;
     box-shadow: 0 0.35rem 10px 2px var(--cta-shadow);
     padding: 1.7rem 6.4rem;
@@ -193,6 +194,7 @@ html {
     cursor: pointer;
 
     &:hover {
+      background-color: var(--pink-hover);
       box-shadow: 0 0.65rem 1.5rem 0.2rem var(--cta-shadow);
       -webkit-transform: translateY(-1.5px);
       transform: translateY(-1.5px);
@@ -339,6 +341,7 @@ html {
     cursor: pointer;
 
     &:hover {
+      background-color: var(--pink-hover);
       box-shadow: 0 0.65rem 1.5rem 0.2rem var(--cta-shadow);
       -webkit-transform: translateY(-1.5px);
       transform: translateY(-1.5px);
