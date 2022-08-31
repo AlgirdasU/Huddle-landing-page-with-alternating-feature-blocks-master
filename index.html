@@ -20,6 +20,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
 
     <title>
       Frontend Mentor | Huddle landing page with alternating feature blocks
@@ -46,34 +47,33 @@
     </header>
 
     <main class="main-container">
-      <section class="hero">
+      <section class="hero-bg">
         <img
           src="images/bg-hero-desktop.svg"
           alt="Hero desktop image"
-          class="hero__bg-desktop"
+          class="hero-bg__desktop"
         />
-
         <img
           src="images/bg-hero-mobile.svg"
           alt="Hero mobile image"
-          class="hero__bg-mobile"
+          class="hero-bg__mobile"
         />
+      </section>
 
-        <div class="hero__hero-container">
-          <div class="hero__text-box">
-            <h1 class="hero__heading-primary">
-              Build The Community Your Fans Will Love
-            </h1>
-            <p class="hero__description">
-              Huddle re-imagines the way we build communities. You have a voice,
-              but so does your audience. Create connections with your users as
-              you engage in genuine discussion.
-            </p>
-            <a href="#cta" class="hero__btn">Get Started For Free</a>
-          </div>
-          <div class="hero__img-box">
-            <img src="images/illustration-mockups.svg" alt="Mockups" />
-          </div>
+      <section class="hero">
+        <div class="hero__text-box">
+          <h1 class="hero__heading-primary">
+            Build The Community Your Fans Will Love
+          </h1>
+          <p class="hero__description">
+            Huddle re-imagines the way we build communities. You have a voice,
+            but so does your audience. Create connections with your users as you
+            engage in genuine discussion.
+          </p>
+          <a href="#cta" class="hero__btn">Get Started For Free</a>
+        </div>
+        <div class="hero__img-hero-box">
+          <img src="images/illustration-mockups.svg" alt="Mockups" />
         </div>
       </section>
 
@@ -87,21 +87,21 @@
               miss out on with a feedback form.
             </p>
           </div>
-          <div class="feature__img-box">
-            <img
-              src="images/illustration-grow-together.svg"
-              alt="Illustration grow together"
-            />
-          </div>
+
+          <img
+            src="images/illustration-grow-together.svg"
+            alt="Illustration grow together"
+            class="feature__img-feature"
+          />
         </div>
 
         <div class="feature">
-          <div class="feature__img-box">
-            <img
-              src="images/illustration-flowing-conversation.svg"
-              alt="Illustration flowing conversation"
-            />
-          </div>
+          <img
+            src="images/illustration-flowing-conversation.svg"
+            alt="Illustration flowing conversation"
+            class="feature__img-feature"
+          />
+
           <div class="feature__text-box">
             <h2 class="feature__title">Flowing Conversations</h2>
             <p class="feature__text">
@@ -121,12 +121,12 @@
               your users can start chatting immediately.
             </p>
           </div>
-          <div class="feature__img-box">
-            <img
-              src="images/illustration-your-users.svg"
-              alt="Illustration your users"
-            />
-          </div>
+
+          <img
+            src="images/illustration-your-users.svg"
+            alt="Illustration your users"
+            class="feature__img-feature"
+          />
         </div>
       </section>
 
@@ -137,38 +137,46 @@
     </main>
 
     <footer class="footer">
-      <div class="footer__content">
-        <div class="footer__contacts">
-          <img
-            src="images/logo.svg"
-            alt="Main logo"
-            class="footer__main-logo"
-          />
-          <img
-            src="images/location-svgrepo-com.svg"
-            alt="Icon location"
-            class="footer__icon-location"
-          />
-          <p class="footer__info-location">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua
-          </p>
-          <img
-            src="images/phone-call-svgrepo-com.svg"
-            alt="Icon phone"
-            class="footer__icon-phone"
-          />
-          <p class="footer__phone-nr">
-            <a href="+1-543-123-4567" class="footer__phone-link"></a>
-          </p>
-          <img
-            src="images/gmail-svgrepo-com.svg"
-            alt="Icon email"
-            class="footer__icon-email"
-          />
-          <p class="footer__email">
-            <a href="example@huddle.com" class="footer__email-link"></a>
-          </p>
+      <div class="footer__logo-box">
+        <svg class="footer__main-logo">
+          <use xlink:href="images/sprite.svg#logo-footer"></use>
+        </svg>
+      </div>
+
+      <div class="footer__contacts">
+        <div class="footer__contact-us-box">
+          <div class="footer__icon-location-box">
+            <svg class="footer__icon-location">
+              <use xlink:href="images/sprite.svg#icon-location"></use>
+            </svg>
+
+            <p class="footer__info-location">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </p>
+          </div>
+
+          <div class="footer__icon-phone-box">
+            <svg class="footer__icon-phone">
+              <use xlink:href="images/sprite.svg#icon-phone"></use>
+            </svg>
+            <p class="footer__phone-nr">
+              <a href="+1-543-123-4567" class="footer__phone-link"
+                >+1-543-123-4567</a
+              >
+            </p>
+          </div>
+
+          <div class="footer__icon-email-box">
+            <svg class="footer__icon-phone">
+              <use xlink:href="images/sprite.svg#icon-email"></use>
+            </svg>
+            <p class="footer__email">
+              <a href="example@huddle.com" class="footer__email-link"
+                >example@huddle.com</a
+              >
+            </p>
+          </div>
         </div>
 
         <div class="footer__links">
@@ -182,6 +190,9 @@
             <li class="footer__links-list-item">
               <a href="#">FAQ</a>
             </li>
+          </ul>
+
+          <ul class="footer__links-list">
             <li class="footer__links-list-item">
               <a href="#">Career</a>
             </li>
@@ -206,7 +217,7 @@
             </li>
             <li class="footer__social-list-item">
               <a href="#" class="footer__social-link">
-                <img src="images/twitter-svgrepo-com.svg" alt="Twitter icon" />
+                <img src="images/twitter-svgrepo.svg" alt="Twitter icon" />
               </a>
             </li>
             <li class="footer__social-list-item">
@@ -217,19 +228,23 @@
               /></a>
             </li>
           </ul>
+          <div class="copyright">
+            <span
+              >&copy; Copyright <span class="year">2018</span> Huddle. All
+              rights reserved.</span
+            >
+          </div>
         </div>
       </div>
-
-      <div class="footer__copyright">
-        <span>&copy; Copyright 2018 Huddle. All rights reserved.</span>
+      <div class="attribution">
+        <p class="attribution__attr-content">
+          <span>Challenge by</span>
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          ><span>. Coded by </span
+          ><a href="https://github.com/AlgirdasU">Algirdas</a>.
+        </p>
       </div>
-
-      <p class="attribution">
-        <span>Challenge by</span>
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        ><span>. Coded by </span><a href="#">Algirdas</a>.
-      </p>
     </footer>
   </body>
 </html>
